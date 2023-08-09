@@ -31,6 +31,13 @@
       left: 0; 
       height: 70%; /* Adjust the height to make the map smaller */
     }
+    
+    .mapboxgl-marker path {
+      transform: scale(0.9);
+      border-radius: 50%; 
+    }
+
+   
 
     #scrolly {
       position: relative;
@@ -95,8 +102,9 @@
         margin-top: 70vh;
         order: 0;
         /* Change these to adjust sizing options */
-        min-width: 20rem;
-        max-width: 30rem;
+        min-width: 30rem;
+        max-width: 40rem;
+        padding-left: 6rem; 
       }
 
       #scrolly.side-by-side .sticky-thing {
@@ -116,10 +124,7 @@
     <div id="map"></div>
   </div>
 
- 
-  <audio controls>
-    <source src="airalert2.m4a" type="audio/mp4">
-  </audio>
+   
 
 
 
@@ -133,6 +138,7 @@
       This sound will suddenly go off while you are at work, while you are having dinner with your family, even at 2 am in the middle of the night.
       Maybe nothing will happen, but maybe a missile will rain down on you.
     </p>
+   
             
     <audio controls>
       <source src="airalert2.m4a" type="audio/mp4">
@@ -141,9 +147,24 @@
     <p class="intro__dek">This sound is an air raid alarm in Ukraine, which I recorded last July in Lviv. It was in midnight, and I couldn't go back to sleep until the next morning. Sadly for Ukraine people, air raid alarms are not unusual. This is the situation even in the more populated cities of Kyiv and Lviv. 
     </p> 
     <p class="intro__dek">When the alarm sounds, people have to flee to underground or other shelters. In Kyiv, many people flee to the subway. People have to stay there until the alarm is lifted. Some people work, study, or sleep in the evacuated basement.</p>
+    <p class="intro__dek">But As you can see the video below, people often ignore the alerts because it is too often, and in many cases, nothing happened.</p>
+    <video controls width="640" height="360">
+      <source src="video.mp4" type="video/mp4">
+      <!-- Fallback content for browsers that don't support the video element -->
+      Your browser does not support the video tag.
+    </video>
     <p class="intro__dek">
-      I looked up the average time during air raid warning per day of these two cities from a website that records air raid alerts for all of Ukraine. As you scroll, you can see the average minutes per day depending on month.
-    </p>        
+      I looked up the website that records all the air raid alerts since February 2022, when the invasion started. This is the number of air alerts per month in Kyiv and Lviv.</p>
+    </p>
+
+    <iframe title="numbers of air alerts of Kyiv and Lviv by month" aria-label="Interactive line chart" id="datawrapper-chart-6MZpY" src="https://datawrapper.dwcdn.net/6MZpY/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script>
+    
+    
+    <p class="intro__dek">
+      I also looked up the average time during air raid alerts per day of these two cities. As you scroll, you can see the average minutes per day depending on month.
+    </p>
+
 
    </section>
 
@@ -1007,13 +1028,13 @@
     })
 
     d3.select("#step-two").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-6").classed('hidden', true)
         d3.select("#path-7").classed('hidden', true)
         d3.select("#path-8").classed('hidden', true)
         d3.select("#path-9").classed('hidden', true)
         d3.select("#path-10").classed('hidden', true)
-
+      }
     })
 
     /* Step 3 code - bacj ti normal*/
@@ -1033,13 +1054,13 @@
     })
 
     d3.select("#step-three").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up') {
         d3.select("#path-11").classed('hidden', true)
         d3.select("#path-12").classed('hidden', true)
         d3.select("#path-13").classed('hidden', true)
         d3.select("#path-14").classed('hidden', true)
         d3.select("#path-15").classed('hidden', true)
-
+      }
     })
 
     /* Step 4 code - bacj ti normal*/
@@ -1058,12 +1079,13 @@
     })
 
     d3.select("#step-four").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-16").classed('hidden', true)
         d3.select("#path-17").classed('hidden', true)
         d3.select("#path-18").classed('hidden', true)
         d3.select("#path-19").classed('hidden', true)
         d3.select("#path-20").classed('hidden', true)
+      }
 
     })
 
@@ -1085,12 +1107,13 @@
     })
 
     d3.select("#step-five").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-21").classed('hidden', true)
         d3.select("#path-22").classed('hidden', true)
         d3.select("#path-23").classed('hidden', true)
         d3.select("#path-24").classed('hidden', true)
         d3.select("#path-25").classed('hidden', true)
+      }
 
     })
 
@@ -1112,12 +1135,13 @@
     })
 
     d3.select("#step-six").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-26").classed('hidden', true)
         d3.select("#path-27").classed('hidden', true)
         d3.select("#path-28").classed('hidden', true)
         d3.select("#path-29").classed('hidden', true)
         d3.select("#path-30").classed('hidden', true)
+      }
 
     })
 
@@ -1137,12 +1161,13 @@
 
     })
     d3.select("#step-seven").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-31").classed('hidden', true)
         d3.select("#path-32").classed('hidden', true)
         d3.select("#path-33").classed('hidden', true)
         d3.select("#path-34").classed('hidden', true)
         d3.select("#path-35").classed('hidden', true)
+      }
 
     })
 
@@ -1162,12 +1187,13 @@
 
     })
     d3.select("#step-eight").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-36").classed('hidden', true)
         d3.select("#path-37").classed('hidden', true)
         d3.select("#path-38").classed('hidden', true)
         d3.select("#path-39").classed('hidden', true)
         d3.select("#path-40").classed('hidden', true)
+      }
 
     })
 
@@ -1187,12 +1213,13 @@
 
     })
     d3.select("#step-nine").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-41").classed('hidden', true)
         d3.select("#path-42").classed('hidden', true)
         d3.select("#path-43").classed('hidden', true)
         d3.select("#path-44").classed('hidden', true)
         d3.select("#path-45").classed('hidden', true)
+      }
 
     })
 
@@ -1212,12 +1239,13 @@
 
     })
     d3.select("#step-ten").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-46").classed('hidden', true)
         d3.select("#path-47").classed('hidden', true)
         d3.select("#path-48").classed('hidden', true)
         d3.select("#path-49").classed('hidden', true)
         d3.select("#path-50").classed('hidden', true)
+      }
 
     })
 
@@ -1238,12 +1266,13 @@
     })
 
     d3.select("#step-eleven").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-51").classed('hidden', true)
         d3.select("#path-52").classed('hidden', true)
         d3.select("#path-53").classed('hidden', true)
         d3.select("#path-54").classed('hidden', true)
         d3.select("#path-55").classed('hidden', true)
+      }
 
     })
 
@@ -1263,12 +1292,13 @@
 
     })
     d3.select("#step-twelve").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-56").classed('hidden', true)
         d3.select("#path-57").classed('hidden', true)
         d3.select("#path-58").classed('hidden', true)
         d3.select("#path-59").classed('hidden', true)
         d3.select("#path-60").classed('hidden', true)
+      }
 
     })
 
@@ -1290,12 +1320,13 @@
     })
 
     d3.select("#step-thirteen").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-61").classed('hidden', true)
         d3.select("#path-62").classed('hidden', true)
         d3.select("#path-63").classed('hidden', true)
         d3.select("#path-64").classed('hidden', true)
         d3.select("#path-65").classed('hidden', true)
+      }
 
     })
 
@@ -1316,12 +1347,13 @@
     })
 
     d3.select("#step-fourteen").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-66").classed('hidden', true)
         d3.select("#path-67").classed('hidden', true)
         d3.select("#path-68").classed('hidden', true)
         d3.select("#path-69").classed('hidden', true)
         d3.select("#path-70").classed('hidden', true)
+      }
 
     })
 
@@ -1343,12 +1375,13 @@
     })
 
     d3.select("#step-fifteen").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-71").classed('hidden', true)
         d3.select("#path-72").classed('hidden', true)
         d3.select("#path-73").classed('hidden', true)
         d3.select("#path-74").classed('hidden', true)
         d3.select("#path-75").classed('hidden', true)
+      }
 
     })
 
@@ -1370,12 +1403,13 @@
     })
 
     d3.select("#step-sixteen").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-76").classed('hidden', true)
         d3.select("#path-77").classed('hidden', true)
         d3.select("#path-78").classed('hidden', true)
         d3.select("#path-79").classed('hidden', true)
         d3.select("#path-80").classed('hidden', true)
+      }
 
     })
 
@@ -1398,12 +1432,13 @@
     })
 
     d3.select("#step-seventeen").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-81").classed('hidden', true)
         d3.select("#path-82").classed('hidden', true)
         d3.select("#path-83").classed('hidden', true)
         d3.select("#path-84").classed('hidden', true)
         d3.select("#path-85").classed('hidden', true)
+      }
 
     })
 
@@ -1425,14 +1460,17 @@
     })
 
     d3.select("#step-eighteen").on('stepout', function (e) {
-      if (e.detail.direction === 'up')
+      if (e.detail.direction === 'up'){
         d3.select("#path-86").classed('hidden', true)
         d3.select("#path-87").classed('hidden', true)
         d3.select("#path-88").classed('hidden', true)
         d3.select("#path-89").classed('hidden', true)
         d3.select("#path-90").classed('hidden', true)
+      }
 
     })
+
+    
 
 
   </script>
@@ -1535,6 +1573,13 @@
     })();
   </script>
 
+<section id="outro">
+  
+   
+  <p class="outro__dek">**The main character of these 37 series are human, mutants, robots, cat, dog, but supposedly all of them are male.</p>
+  <div class="social"><a href="https://twitter.com/mizuhomorioka" target="_blank">twitter</a><br><a href="https://github.com/mizuhomorioka/comic-project" target="_blank">github</a>
+          </div>
+      
 <script>
 
   mapboxgl.accessToken = 'pk.eyJ1IjoiaWtiZW5taXp1aG8iLCJhIjoiY2xqZWNzazNhMHh1bTNlcWUxdjNicGEybSJ9.9_UG2PBJ9fkKxkLYHH8Uvg';
@@ -1545,10 +1590,28 @@
     zoom: 5, // starting zoom
   });
 
+  var marker = new mapboxgl.Marker({
+    color: "red"
+    
+
+  })
+  .setLngLat([30.524196335180363, 50.44982993517871])
+  .addTo(map);
+
+  var marker = new mapboxgl.Marker({
+    color: "red"
+  })
+  .setLngLat([24.03126558437512,
+          49.841713440700346])
+  .addTo(map);
+
  
 
 
 </script>
+
+
+ 
 </body>
 
 </html>
