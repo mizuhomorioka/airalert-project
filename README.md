@@ -5,7 +5,7 @@ I visited Ukraine last summer for reporting. At that time, Lviv, the city I stay
 The war has been going on for more than a year, and people are still trying to maintain their daily lives. But the sound of the air raid alarm reminds them that we are still at war.
 
 ## Data Source
-I used [alerts in ua](https://alerts.in.ua/en), which track the time and place of all the air alerts. I scraped the data, and calculated the average length of under air alert.
+I used [alerts in ua](https://alerts.in.ua/en), which track the time and place of all the air alerts. I got the data manually, and calculated the average length of under air alert.
 
 ## Things I learned
 I used scrolltelling and made an interactive chart successfully. Also I put a map from mapbox, and embed video and sound.
